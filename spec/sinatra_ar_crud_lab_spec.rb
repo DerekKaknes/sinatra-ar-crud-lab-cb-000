@@ -125,7 +125,7 @@ describe "Blog Post App" do
       visit "/posts/#{@post2.id}"
 
       click_button "delete"
-      # binding.pry
+      
       expect(Post.all.count).to eq(1)
       expect(Post.last.name).to eq("Hello World")
     end
